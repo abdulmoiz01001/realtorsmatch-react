@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AboutUsComp from '../components/AboutUsComp'
 
 const AboutUsPage = () => {

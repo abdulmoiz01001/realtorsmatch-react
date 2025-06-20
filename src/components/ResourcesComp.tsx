@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -65,16 +65,16 @@ const ResourcesComp = () => {
     ];
 
     return (
-        <div className="w-full flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-            <div className="w-[80%] flex flex-col justify-start items-start">
+        <div className="w-full flex   flex-col mt-20 lg:mt-10 items-center justify-center min-h-screen bg-gray-100 p-4">
+            <div className="lg:w-[80%] flex  flex-col justify-start items-start">
                 <div className="w-full flex flex-col justify-start items-start">
                     <p className="text-lg md:text-3xl font-semibold text-[#1a0c2b] mb-4">Resources</p>
                     <h1 className="text-2xl md:text-4xl font-bold text-[#1a0c2b] mb-6">Explore Our Resources</h1>
                 </div>
 
                 <section className="text-gray-600 body-font">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-wrap -m-4">
+                    <div className="container lg:px-5 py-24 mx-auto">
+                        <div className="flex flex-wrap lg:-m-4">
                             {blogs.map((blog, index: number) => (
                                 <div
                                     key={index}

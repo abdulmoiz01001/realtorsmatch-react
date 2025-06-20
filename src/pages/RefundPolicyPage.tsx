@@ -1,4 +1,4 @@
-import React from 'react'
+
 import RefundPolicyComp from '../components/RefundPolicyComp'
 
 const RefundPolicyPage = () => {

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -41,21 +41,21 @@ const LeadNurturingComp = () => {
 
   return (
     <>
-      <div className="w-full bg-white mt-25 text-white py-20 px-6 flex flex-col gap-20">
+      <div className="w-full bg-white mt-25 text-white py-20 lg:px-6 flex flex-col gap-20">
         {/* Section 3: Cultivating Client Relationships */}
         <div
           ref={containerRef}
-          className="w-[90%] mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
+          className="lg:w-[90%] mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
         >
           <div ref={textRef} className="lg:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Cultivating <span className="text-[rgb(255,70,85)]">Client Relationships</span>
             </h2>
             <h3 className="text-2xl font-semibold text-gray-800 mt-6">Lead Nurturing Philosophy</h3>
-            <p className="text-base text-gray-600 mt-2">
+            <p className="text-sm lg:text-base text-gray-600 mt-2">
               In today’s competitive landscape, simply generating leads isn’t enough. True success lies in transforming those leads into loyal, long-term clients. This is where the art of lead nurturing comes in.
             </p>
-            <p className="text-base text-gray-600 mt-2">
+            <p className="text-sm lg:text-base text-gray-600 mt-2">
               At <span className="font-semibold">Prospectigo</span>, we believe lead nurturing is all about fostering meaningful connections with potential clients. We move beyond generic marketing tactics and embrace a personalized approach, tailored to each individual’s needs and interests.
             </p>
 
@@ -73,7 +73,7 @@ const LeadNurturingComp = () => {
             </ul>
 
             <h4 className="text-xl font-semibold text-gray-800 mt-6">Effective Lead Nurturing</h4>
-            <p className="text-base text-gray-600">
+            <p className="text-sm lg:text-base text-gray-600">
               By combining personalized engagement, tailored communication, and a meticulous qualification process, we ensure a steady stream of high-quality leads nurtured to the point of near-decision. This empowers your sales team to focus on what they do best: closing deals and driving sustainable growth for your business.
             </p>
           </div>

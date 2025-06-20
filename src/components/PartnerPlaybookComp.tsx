@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import GetLeadsComp from "./GetLeadsComp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,9 +15,9 @@ const PartnerPlaybookComp = () => {
         gsap.from(el, {
           scrollTrigger: {
             trigger: el,
-            start: "30% 50%",
+            start: "top 50%",
             end: "50% 60%",
-            
+            markers: true,
             toggleActions: "play none none ",
           },
           opacity: 0,
@@ -32,18 +32,18 @@ const PartnerPlaybookComp = () => {
 
   return (
     <>
-      <div className="w-[90%] mx-auto mt-30 bg-white text-black shadow-xl rounded-2xl flex flex-col gap-12">
+      <div className="lg:w-[90%] mx-auto mt-30 bg-white text-black shadow-xl rounded-2xl flex flex-col gap-12">
         {/* 1. Communication That Connects */}
         <div
           className="flex flex-col h-full lg:flex-row justify-between items-center gap-10 p-10"
           ref={(el) => { sectionsRef.current[0] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Communication That{" "}
               <span className="text-[rgb(255,70,85)]">Connects</span>
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-sm lg:text-base text-gray-600">
               Success in real estate begins with clarity. Our Partner Playbook
               champions transparent, timely communication. We ensure alignment
               on every goal, deadline, and update—empowering agents and clients
@@ -67,11 +67,11 @@ const PartnerPlaybookComp = () => {
           ref={(el) => { sectionsRef.current[1] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Empowerment Through{" "}
               <span className="text-[rgb(255,70,85)]">Support</span>
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-sm lg:text-base text-gray-600">
               We go beyond services—we stand beside our partners with strategic
               resources, insights, and real-time support. Whether it’s enhancing
               a property listing or navigating a tough negotiation, our shared
@@ -95,11 +95,11 @@ const PartnerPlaybookComp = () => {
           ref={(el) => { sectionsRef.current[2] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Consistency Through{" "}
               <span className="text-[rgb(255,70,85)]">Every Stage</span>
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-sm lg:text-base text-gray-600">
               Real estate deals are complex and lengthy—but our commitment is
               continuous. From first contact to closing, we stay connected,
               proactive, and dependable, ensuring a smooth experience for both
@@ -123,10 +123,10 @@ const PartnerPlaybookComp = () => {
           ref={(el) => { sectionsRef.current[3] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Innovation as a <span className="text-[rgb(255,70,85)]">Standard</span>
             </h2>
-            <p className="text-base text-gray-600">
+            <p className="text-sm lg:text-base text-gray-600">
               We embrace change to lead the market. With a focus on emerging
               tech and agile strategies, we equip partners to grow, adapt, and
               excel—whether it’s leveraging automation, virtual tours, or

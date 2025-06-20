@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -47,18 +47,18 @@ const LeadGenStrategiesComp = () => {
 
   return (
     <>
-      <div className="w-full bg-white mt-25 text-white py-20 px-6 flex flex-col gap-20">
+      <div className="w-full bg-white mt-25 text-white py-20 lg:px-6 flex flex-col gap-20">
 
         {/* Section 1: Revolutionizing Real Estate */}
         <div
           ref={(el) => { sectionsRef.current[0] = el! }}
-          className="w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col justify-center items-center text-center gap-6"
+          className="lg:w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col justify-center items-center text-center gap-6"
         >
           <div className="animate-text">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Revolutionizing <span className="text-[rgb(255,70,85)]">Real Estate</span>
             </h2>
-            <p className="text-base text-gray-600 max-w-3xl">
+            <p className="text-sm mt-2 lg:text-base text-gray-600 max-w-3xl">
               At <span className="font-semibold">Realtos Match</span>, we empower real estate professionals across the USA with unparalleled lead generation, transaction coordination services, and virtual assistance. Our innovative approach merges advanced technology with proven marketing strategies, designed to maximize your success in today’s dynamic market.
             </p>
           </div>
@@ -67,14 +67,14 @@ const LeadGenStrategiesComp = () => {
         {/* Section 2: Business Growth */}
         <div
           ref={(el) => { sectionsRef.current[1] = el! }}
-          className="w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col gap-6"
+          className="lg:w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col gap-6"
         >
-          <div className="animate-text">
-            <h2 className="text-4xl font-bold text-gray-900 text-center">
+          <div className="flex flex-col items-start gap-4 animate-text">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 text-center">
               BUSINESS <span className="text-[rgb(255,70,85)]">GROWTH</span>
             </h2>
             <h3 className="text-2xl font-semibold text-gray-800">Innovative Lead Generation Strategies</h3>
-            <p className="text-base text-gray-600">
+            <p className="text-sm mt-2 lg:text-base text-gray-600">
               In today’s fiercely competitive business landscape, effective lead generation is paramount to sustained growth and success. At Prospectigo, we employ a diverse array of innovative strategies tailored to attract and engage potential clients. By leveraging cutting-edge technologies and keen market insights, we are committed to delivering high-quality leads that fuel business expansion.
             </p>
 
@@ -93,7 +93,7 @@ const LeadGenStrategiesComp = () => {
             </ul>
 
             <h4 className="text-xl font-semibold text-gray-800">Data-driven Optimization</h4>
-            <p className="text-base text-gray-600">
+            <p className="text-sm mt-2 lg:text-base text-gray-600">
               Central to our lead generation strategy is a commitment to data-driven decision-making. Through rigorous analysis and ongoing optimization, we continuously refine our approaches to maximize ROI and conversion rates. From A/B testing ad creatives to fine-tuning targeting parameters, we leverage data insights to drive continuous improvement and deliver measurable results for our clients.
             </p>
           </div>
@@ -102,9 +102,9 @@ const LeadGenStrategiesComp = () => {
         {/* Section 3: img */}
         <div
           ref={(el) => { sectionsRef.current[2] = el! }}
-          className="lg:w-[90%] h-full h-[300px] mx-auto flex justify-center items-center"
+          className="lg:w-[90%] h-full lg:h-[300px] mx-auto flex justify-center items-center"
         >
-          <div className="w-[50%] h-full animate-img">
+          <div className="lg:w-[50%] h-full animate-img">
             <img
               width={500}
               height={500}

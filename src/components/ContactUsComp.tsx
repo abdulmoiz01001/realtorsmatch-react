@@ -10,9 +10,9 @@ const ContactUsComp = () => {
                 <div className="w-[90%] max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
                     {/* Text Content */}
                     <div className="bg-white p-10 rounded-xl shadow-md space-y-6 animate-fade-in">
-                        <p className="text-3xl font-semibold">Contact Us</p>
-                        <h1 className="text-5xl font-bold text-[#ff4655] leading-tight">We are here to help you</h1>
-                        <p className="text-lg text-gray-700">
+                        <p className="lg:text-3xl text-2xl font-semibold">Contact Us</p>
+                        <h1 className="lg:text-5xl text-3xl font-bold text-[#ff4655] leading-tight">We are here to help you</h1>
+                        <p className="lg:text-lg text-sm text-gray-700">
                             If you have any questions or need assistance, feel free to reach out. Our team is always ready to support you.
                         </p>
                     </div>
@@ -27,7 +27,7 @@ const ContactUsComp = () => {
                 </div>
 
                 {/* Contact Cards */}
-                <div className="w-full bg-black py-12 flex flex-wrap justify-center gap-10">
+                <div className="w-full bg-black py-12 flex  flex-wrap justify-center gap-10">
                     {/* Card Component */}
                     {[
                         {
@@ -64,7 +64,7 @@ const ContactUsComp = () => {
                     ))}
                 </div>
                    {/* Contact Form */}
-                <div className="w-[90%] max-w-5xl my-16 bg-white p-10 rounded-xl shadow-xl">
+                <div className="lg:w-[90%] lg:max-w-5xl my-16 bg-white p-10 rounded-xl shadow-xl">
                     <h2 className="text-3xl font-bold text-center text-[#ff4655] mb-8">Send Us a Message</h2>
                     <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="flex flex-col">

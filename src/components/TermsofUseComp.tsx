@@ -1,11 +1,11 @@
-import React from 'react'
+
 
 const TermsofUseComp = () => {
     return (
         <>
             <div className='w-full h-full flex flex-col pt-30 justify-center items-center ' >
-                <div className='bg-black w-[80%] py-10 flex flex-col justify-start items-start gap-8' >
-                    <h1 className='text-8xl text-[rgb(255,70,85)] font-semibold px-10 pt-10' >Terms Of Use</h1>
+                <div className='bg-black w-[80%] lg:py-10 py-5 flex flex-col justify-start items-start gap-8' >
+                    <h1 className='lg:text-8xl text-4xl text-[rgb(255,70,85)] font-semibold px-10 pt-10' >Terms Of Use</h1>
                 </div>
                 <div className=' w-[80%] py-10 flex text-black text-justify flex-col justify-start items-start gap-8' >
                     <p>Welcome to <strong>RealtorsMatch</strong>, {`a platform built to support real estate professionals and clients through secure, efficient, and responsible services. These Terms of Use govern your access and use of RealtorsMatch’s website, mobile tools, and related services ("Services").`}</p>

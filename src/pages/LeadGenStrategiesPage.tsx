@@ -1,4 +1,4 @@
-import React from 'react'
+
 import LeadGenStrategiesComp from '../components/LeadGenStrategiesComp'
 
 const LeadGenStrategiesPage = () => {

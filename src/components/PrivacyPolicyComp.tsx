@@ -1,11 +1,11 @@
-import React from 'react'
+
 
 const PrivacyPolicyComp = () => {
     return (
         <>
             <div className='w-full h-full flex flex-col pt-30 justify-center items-center ' >
-                <div className='bg-black w-[80%] py-10 flex flex-col justify-start items-start gap-8' >
-                    <h1 className='text-8xl text-[rgb(255,70,85)] font-semibold px-10 pt-10' >Privacy Policy</h1>
+                <div className='bg-black w-[80%] lg:py-10 py-5 flex flex-col justify-start items-start gap-8' >
+                    <h1 className='lg:text-8xl text-4xl text-[rgb(255,70,85)] font-semibold px-10 pt-10' >Privacy Policy</h1>
                 </div>
                 <div className=' w-[80%] py-10 flex text-black text-justify flex-col justify-start items-start gap-8' >
                     <p>
@@ -32,11 +32,11 @@ const PrivacyPolicyComp = () => {
                         not use the Services.`}
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-6">Information We Collect</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-6">Information We Collect</h2>
 
                     <p>We collect information both directly from you and passively through your interaction with our site.</p>
 
-                    <h3 className="text-xl font-semibold mt-4">Direct Information You Provide:</h3>
+                    <h3 className="lg:text-xl text-sm font-semibold mt-4">Direct Information You Provide:</h3>
                     <ul className="list-disc list-inside">
                         <li>Filling forms or surveys</li>
                         <li>Creating an account</li>
@@ -57,7 +57,7 @@ const PrivacyPolicyComp = () => {
                         <li>Financial details (as needed for certain services)</li>
                     </ul>
 
-                    <h3 className="text-xl font-semibold mt-4">Information Collected Automatically:</h3>
+                    <h3 className="lg:text-xl text-sm font-semibold mt-4">Information Collected Automatically:</h3>
                     <p>We gather technical data when you interact with our services, including:</p>
                     <ul className="list-disc list-inside">
                         <li>IP address, browser type, OS, geolocation</li>
@@ -66,25 +66,25 @@ const PrivacyPolicyComp = () => {
                         <li>Cookies and tracking pixels to analyze performance and user preferences</li>
                     </ul>
 
-                    <h3 className="text-xl font-semibold mt-4">Location Data:</h3>
+                    <h3 className="lg:text-xl text-sm font-semibold mt-4">Location Data:</h3>
                     <p>
                         If enabled on your device, we may use GPS or IP-based geolocation to tailor
                         your experience. You can manage this through your device settings.
                     </p>
 
-                    <h3 className="text-xl font-semibold mt-4">Third-Party Data:</h3>
+                    <h3 className="lg:text-xl text-sm font-semibold mt-4">Third-Party Data:</h3>
                     <p>
                         We may supplement collected data with information from third-party sources to
                         verify your identity, enhance services, or prevent fraud.
                     </p>
 
-                    <h3 className="text-xl font-semibold mt-4">Cross-Device Collection:</h3>
+                    <h3 className="lg:text-xl text-sm font-semibold mt-4">Cross-Device Collection:</h3>
                     <p>
                         Using hashed emails, IPs, or device identifiers, we may recognize you across
                         multiple devices to ensure a seamless experience and targeted communication.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-6">How We Use Your Information</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-6">How We Use Your Information</h2>
                     <ul className="list-disc list-inside space-y-2">
                         <li>To fulfill service requests and personalize your experience</li>
                         <li>To verify identity and facilitate secure access</li>
@@ -109,7 +109,7 @@ const PrivacyPolicyComp = () => {
                         mobile apps. These may include promotional content, but you are not obligated to
                         accept them as a condition of any purchase.
                     </p>
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">2. How We Use Your Information</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">2. How We Use Your Information</h2>
                     <ul className="list-disc pl-6 mb-4">
                         <li>Verify identity and provide services</li>
                         <li>Send transactional and promotional communications</li>
@@ -118,7 +118,7 @@ const PrivacyPolicyComp = () => {
                         <li>Analyze trends, send SMS or WhatsApp updates</li>
                     </ul>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">3. Disclosing Your Information</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">3. Disclosing Your Information</h2>
                     <ul className="list-disc pl-6 mb-4">
                         <li>With your consent or to real estate partners</li>
                         <li>To subcontractors, service providers, business partners</li>
@@ -126,47 +126,47 @@ const PrivacyPolicyComp = () => {
                         <li>In business transfers like mergers or acquisitions</li>
                     </ul>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">4. Online Analytics and Advertising</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">4. Online Analytics and Advertising</h2>
                     <p className="mb-4">
                         We use tools like Google Analytics and advertising platforms to collect data, evaluate usage, and deliver personalized content and ads. You may opt out via browser settings or ad platforms but may still receive non-targeted ads.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">5. Do Not Track (DNT)</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">5. Do Not Track (DNT)</h2>
                     <p className="mb-4">
                         We currently do not respond to DNT browser signals due to a lack of industry standard.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">6. Managing Your Data</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">6. Managing Your Data</h2>
                     <p className="mb-4">
                         You can update or request removal of your data by contacting us. We retain some information for legal and operational reasons even after account closure.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">7. Consent to Data Transfer</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">7. Consent to Data Transfer</h2>
                     <p className="mb-4">
                         By using our Services, you consent to your data being transferred to and processed in the U.S. and other jurisdictions that may have different privacy laws.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">{`8. Children’s Privacy`}</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">{`8. Children’s Privacy`}</h2>
                     <p className="mb-4">
                         {`Our Services are not intended for children under 13. If we learn we've collected data from such users, we will promptly delete it.
                    `} </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">9. Security</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">9. Security</h2>
                     <p className="mb-4">
                         We use security measures to protect your data, but cannot guarantee complete protection. Please safeguard your credentials and notify us of any unauthorized access.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">10. Third-Party Links and Services</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">10. Third-Party Links and Services</h2>
                     <p className="mb-4">
                         We are not responsible for privacy practices of third-party sites linked to or from our Services.
                     </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">11. Your California Privacy Rights</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">11. Your California Privacy Rights</h2>
                     <p className="mb-4">
                         {`California residents may request details once a year about information we share with third parties for their direct marketing. Email us at info@realtorsmatch.com with “Privacy Support.”
             `}        </p>
 
-                    <h2 className="text-2xl font-semibold mt-8 mb-4">12. Changes to This Privacy Policy</h2>
+                    <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">12. Changes to This Privacy Policy</h2>
                     <p className="mb-4">
                         We may revise this Policy at any time. Your continued use of our Services constitutes acceptance of any changes.
                     </p>

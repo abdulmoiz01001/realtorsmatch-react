@@ -85,14 +85,14 @@ const TrustedPartnersComp = () => {
 
     return (
         <>
-            <div className="w-full bg-black py-26 flex flex-col justify-center items-center">
-                <h1 className="text-white text-3xl font-semibold mb-10">Our Proud Partners</h1>
+            <div className="w-full bg-black lg:py-26 py-10 flex flex-col justify-center items-center">
+                <h1 className="text-white lg:text-3xl text-2xl font-semibold mb-10">Our Proud Partners</h1>
 
-                <div className="w-[90%] max-w-6xl">
+                <div className="w-[90%]  max-w-6xl">
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={30}
-                        slidesPerView={5}
+                        slidesPerView={4}
                         loop={true}
                         autoplay={{
                             delay: 2000,
@@ -108,10 +108,10 @@ const TrustedPartnersComp = () => {
                             <SwiperSlide key={idx}>
                                 <img
                                     src={logo}
-                                    width={200}
-                                    height={100}
+                                    // width={300}
+                                    // height={100}
                                     alt={`Partner ${idx + 1}`}
-                                    className="h-32 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                                    className="h-20  sm:h-24 md:h-28 lg:h-32 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
                                 />
                             </SwiperSlide>
                         ))}
@@ -119,22 +119,22 @@ const TrustedPartnersComp = () => {
                 </div>
             </div>
             <div className="w-full rounded-2xl bg-amber-50 p-4 m-4 max-w-[80%] flex flex-col text-black justify-start items-start gap-8 text-center mt-10">
-                <p className="text-black text-start text-2xl font-semibold">
+                <p className="text-black text-start text-xl lg:text-2xl font-semibold">
                     Join our trusted partners and grow your business with us!
                 </p>
-                <h2 className="text-black text-start text-lg">
+                <h2 className="text-black text-start text-sm lg:text-lg">
                     We collaborate with leading real estate companies to provide you with the best opportunities in the market.
                     Partner with us to expand your reach and enhance your business prospects.
                 </h2>
             </div>
-            <div className="w-full bg-black text-white py-10 p-8 rounded-2xl max-w-[80%] m-4">
+            <div className="w-full bg-black text-white py-10 p-8 lg:rounded-2xl lg:max-w-[80%] lg:m-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {featuresData.map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-8    ">
+                        <div key={idx} className="flex flex-col lg:flex-row lg:items-start gap-8    ">
                             <div className="shrink-0">{feature.icon}</div>
                             <div>
-                                <h3 className="text-lg font-bold">{feature.title}</h3>
-                                <p className="text-sm text-gray-300 mt-1">{feature.description}</p>
+                                <h3 className="lg:text-lg text-sm font-bold">{feature.title}</h3>
+                                <p className="lg:text-sm text-[14px] text-gray-300 mt-1">{feature.description}</p>
                             </div>
                         </div>
                     ))}

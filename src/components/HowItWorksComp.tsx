@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,8 +22,9 @@ const HowItWorksComp = () => {
         gsap.from(textEl, {
           scrollTrigger: {
             trigger: section,
-            start: "10% 50%",
+            start: "30% 50%",
             end: "bottom 50%",
+            markers: true,
             
           },
           x: -200,
@@ -37,8 +38,9 @@ const HowItWorksComp = () => {
         gsap.from(imgEl, {
           scrollTrigger: {
             trigger: section,
-            start: "10% 60%",
+            start: "20% 60%",
             end: "bottom 60%",
+            markers: true,
             
           },
           scale: 0.8,
@@ -51,11 +53,11 @@ const HowItWorksComp = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col mt-25 items-center gap-16 justify-center min-h-screen bg-gray-100 p-6">
+    <div className="w-full flex flex-col mt-25 items-center gap-16 justify-center min-h-screen bg-gray-100 lg:p-6">
       {/* Banner */}
-      <div className="w-[80%] h-full  flex justify-between items-center text-black bg-white shadow-lg rounded-lg p-8">
+      <div className="lg:w-[80%]  h-full  flex justify-between items-center text-black bg-white shadow-lg rounded-lg p-8">
         <div className="w-[45%]">
-          <h1 className="text-5xl font-semibold">
+          <h1 className="lg:text-5xl text-xl font-semibold">
             You Seal the <span className="text-[rgb(255,70,85)]">Deal</span>,<br />
             We’ll Take It from There
           </h1>
@@ -74,19 +76,19 @@ const HowItWorksComp = () => {
       {/* Section 1 */}
       <div
         ref={(el) => {sectionsRef.current[0] = el!}}
-        className="w-[80%] h-full  mx-auto bg-black text-white shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
+        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
       >
-        <div ref={(el) => {textRefs.current[0] = el!}} className="lg:w-[50%]">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+        <div ref={(el) => {textRefs.current[0] = el!}} className=" flex flex-col items-start gap-4 lg:w-[50%]">
+          <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight">
             Behind the <span className="text-[rgb(255,70,85)]"> PROCESS</span>
           </h2>
-          <p className="text-lg text-gray-300">A Sneak Peek Behind the Curtain</p>
-          <p className="text-base text-gray-400">
+          <p className="lg:text-lg text-sm text-gray-300">A Sneak Peek Behind the Curtain</p>
+          <p className="text-sm lg:text-base text-gray-400">
             At <span className="text-white font-semibold">Realtors Match</span>,{` we don’t just
             connect clients with agents — we craft personalized journeys. Here's a glimpse into
             our innovative matchmaking process:`}
           </p>
-          <ul className="space-y-4 text-base text-gray-300 mt-4">
+          <ul className="space-y-4 text-sm lg:text-base text-gray-300 mt-4">
             <li>🔍 <span className="font-semibold text-white">1. Understanding Your Needs:</span><br />From budget to lifestyle.</li>
             <li>🤝 <span className="font-semibold text-white">2. Smart Agent Matching:</span><br />Matched with the best agent for you.</li>
             <li>📅 <span className="font-semibold text-white">3. Hassle-Free Scheduling:</span><br />Seamless appointments.</li>
@@ -108,13 +110,13 @@ const HowItWorksComp = () => {
       {/* Section 2 */}
       <div
         ref={(el) => {sectionsRef.current[1] = el!}}
-        className="w-[80%] h-full  mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
+        className="lg:w-[80%] h-full  mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
       >
         <div ref={(el) => {textRefs.current[1] = el!}} className="lg:w-[50%]">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+          <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-gray-900">
             The Engine Behind <span className="text-[rgb(255,70,85)]">Our Success</span>
           </h2>
-          <p className="text-base text-gray-600">
+          <p className="text-sm lg:text-base text-gray-600">
             At <span className="font-semibold">Realtors Match</span>, our operational framework empowers agents across the U.S.
           </p>
           <Link to="/operational-framework">
@@ -137,13 +139,13 @@ const HowItWorksComp = () => {
       {/* Section 3 */}
       <div
         ref={(el) => {sectionsRef.current[2] = el!}}
-        className="w-[80%] h-full  mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
+        className="lg:w-[80%] h-full  mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
       >
         <div ref={(el) => {textRefs.current[2] = el!}} className="lg:w-[50%]">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+          <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-gray-900">
             Connecting You with <span className="text-[rgb(255,70,85)]">Ready Buyers</span>
           </h2>
-          <p className="text-base text-gray-600">
+          <p className="text-sm lg:text-base text-gray-600">
             We generate leads using advanced targeting and real-time data.
           </p>
           <Link to="/lead-gen-strategies">
@@ -166,13 +168,13 @@ const HowItWorksComp = () => {
       {/* Section 4 */}
       <div
         ref={(el) => {sectionsRef.current[3] = el!}}
-        className="w-[80%] h-full  mx-auto bg-black text-white shadow-xl rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
+        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
       >
         <div ref={(el) => {textRefs.current[3] = el!}} className="lg:w-[50%]">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white">
+          <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-white">
             Turning Interest into <span className="text-[rgb(255,70,85)]">Loyalty</span>
           </h2>
-          <p className="text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             Nurturing leads means creating trust — not just follow-ups.
           </p>
           <Link to="/lead-nurturing">
@@ -195,13 +197,13 @@ const HowItWorksComp = () => {
       {/* Section 5 */}
       <div
         ref={(el) => {sectionsRef.current[4] = el!}}
-        className="w-[80%] h-full  mx-auto bg-black text-white shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
+        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
       >
         <div ref={(el) => {textRefs.current[4] = el!}} className="lg:w-[50%]">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white">
+          <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-white">
             Strategic Partnering <span className="text-[rgb(255,70,85)]">Model</span>
           </h2>
-          <p className="text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             We don’t just work with you — we partner with you.
           </p>
           <Link to="/partner-playbook">

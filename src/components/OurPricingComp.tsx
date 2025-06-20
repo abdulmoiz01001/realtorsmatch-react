@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import  { useState } from 'react'
 import { Check } from 'lucide-react';
 
 const plans = [
@@ -45,7 +45,7 @@ const OurPricingComp = () => {
    const [selectedPlan, setSelectedPlan] = useState('PRO');
   return (
     <>
-      <div className='w-full flex flex-col justify-center items-center ' >
+      <div className='w-full flex flex-col lg:mt-10 mt-20 justify-center items-center ' >
         <div className="w-full h-[500px] px-4 py-16 bg-white flex justify-center items-center">
           <div className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-center gap-12">
             {/* Left Side - Heading */}

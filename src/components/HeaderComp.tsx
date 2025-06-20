@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Phone, Menu, X } from 'lucide-react';
 import FancyButton from './common/FancyButton';
@@ -15,7 +15,6 @@ const navLinks = [
 const HeaderComp = () => {
   const router = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const [showPhone, setShowPhone] = useState(false);
 
   const togglePhone = () => {
@@ -92,7 +91,14 @@ const HeaderComp = () => {
               {item.label}
             </button>
           ))}
-          <FancyButton label="Call Us Now" href="/contact-us" />
+          <div
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              router('/contact-us');
+            }}
+          >
+            <FancyButton label="Call Us Now" href="/contact-us" />
+          </div>
         </div>
       </div>
 

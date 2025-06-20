@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import TrustedPartnersComp from "./TrustedPartnersComp";
 
 const AboutUsComp = () => {
@@ -33,23 +33,23 @@ With Realtors Match, you gain a dedicated partner committed to freeing up your s
     ];
 
     return (
-        <div className="w-full mt-[140px] flex justify-center items-center flex-col bg-gray-100">
+        <div className="w-full lg:mt-[140px] mt-25 flex justify-center items-center flex-col bg-gray-100">
             <div className="w-[80%] flex py-10 flex-col gap-2 justify-start items-start">
                 <p className="text-lg text-[#ff4655]">About Realtors Match</p>
-                <h1 className="text-6xl text-black font-semibold">
+                <h1 className="lg:text-6xl text-4xl text-black font-semibold">
                     Get Your Real-Estate <br />
                     Success with Realtors Match
                 </h1>
 
                 {/* Manual Tabs */}
-                <div className="w-[70%] mt-10">
+                <div className="lg:w-[70%] mt-10">
                     {/* Tab Headers */}
                     <div className="flex border-b border-gray-300">
                         {data.map(({ label, value }) => (
                             <button
                                 key={value}
                                 onClick={() => setActiveTab(value)}
-                                className={`py-4 px-6 w-[60%] -mb-[1px] border-b-2 font-medium text-sm transition-all duration-300 ${activeTab === value
+                                className={`py-4 px-6 lg:w-[60%] -mb-[1px] border-b-2 font-medium text-sm transition-all duration-300 ${activeTab === value
                                     ? "border-[#ff4655] text-[#ff4655]"
                                     : "border-transparent text-gray-600 hover:text-[#ff4655]"
                                     }`}
@@ -66,7 +66,7 @@ With Realtors Match, you gain a dedicated partner committed to freeing up your s
                                 activeTab === value && (
                                     <p
                                         key={value}
-                                        className="text-gray-700 text-lg leading-relaxed"
+                                        className="text-gray-700  lg:text-lg text-sm leading-relaxed"
                                     >
                                         {desc}
                                     </p>

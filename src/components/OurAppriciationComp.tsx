@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -53,9 +53,7 @@ const OurAppriciationComp = () => {
                     World
                 </h1>
                 <p className='lg:text-lg text-sm text-justify mr-20 mt-4 mb-6'>
-                    Pellentesque egestas elementum egestas faucibus sem. Velit nunc egestas ut
-                    morbi. Leo diam diam nibh eget fermentum massa pretium. Mi mauris nulla ac
-                    dictum ut mauris non.
+                    At the heart of our mission lies a deep respect for the planet and its people. Through thoughtful real estate development, we aim to create spaces that honor the beauty of nature, promote sustainable living, and enrich communities. Whether it's eco-conscious design, community-driven projects, or architectural innovation, we use every property as an opportunity to show our gratitude for the world around us.
                 </p>
                 <div className='flex flex-wrap lg:gap-y-8 gap-y-4 gap-2 justify-between items-center'>
                     <div className='w-[48%]'>

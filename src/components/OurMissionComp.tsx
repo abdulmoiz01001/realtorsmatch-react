@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { Home, Building2, Handshake, TrendingUp } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import gsap from 'gsap'
