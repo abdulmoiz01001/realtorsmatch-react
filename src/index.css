@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --text-color:   #1A1A1A;
+  
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--foreground);
+  color: var(--foreground);
+  font-family: "poppins";
+  max-width: 100%!important;
+} 
+
+
+/* lookAtOurNumbers.css */
+
+.thunder-shape {
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+}
+
+/* why choose us */
+
+.hexagon-card {
+  width: 240px;
+  height: 270px;
+  background: white;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.hover-hex:hover {
+  transform: scale(1.05) translateY(-6px) rotate(-1deg);
+  box-shadow: 0 12px 24px rgba(255, 70, 85, 0.5);
+}
+
+.inner-content {
+  text-align: center;
+  max-width: 180px;
+}
+
+/* animation what we offer */
+
+@keyframes swayLeft {
+  0%, 100% {
+    transform: translateX(-66px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes swayRight {
+  0%, 100% {
+    transform: translateX(66px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+.animate-sway-left {
+  animation: swayLeft 2s ease-in-out infinite;
+}
+
+.animate-sway-right {
+  animation: swayRight 2s ease-in-out infinite;
+}
+
+/* header comp */
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+
