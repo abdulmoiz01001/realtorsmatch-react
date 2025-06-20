@@ -7,41 +7,51 @@ import GetLeadsComp from "./GetLeadsComp";
 gsap.registerPlugin(ScrollTrigger);
 
 const LeadGenStrategiesComp = () => {
-  const sectionsRef = useRef<HTMLDivElement[]>([]);
+  const section1Ref = useRef<HTMLDivElement>(null);
+  const section2Ref = useRef<HTMLDivElement>(null);
+  const imageSectionRef = useRef<HTMLDivElement>(null);
+  const text1Ref = useRef<HTMLDivElement>(null);
+  const text2Ref = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    sectionsRef.current.forEach((section) => {
-      const text = section.querySelector(".animate-text");
-      const img = section.querySelector(".animate-image");
+    // Section 1 text
+    gsap.from(text1Ref.current, {
+      scrollTrigger: {
+        trigger: section1Ref.current,
+        start: "top 30%",
+        end: "bottom 60%",
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
 
-      if (text) {
-        gsap.from(text, {
-          scrollTrigger: {
-            trigger: section,
-            start: "top 30%",
-            end: "bottom 60%",
-            
-          },
-          x: -200,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.out",
-        });
-      }
+    // Section 2 text
+    gsap.from(text2Ref.current, {
+      scrollTrigger: {
+        trigger: section2Ref.current,
+        start: "top 30%",
+        end: "bottom 60%",
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
 
-      if (img) {
-        gsap.from(img, {
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%",
-            end: "bottom 60%",
-          },
-          scale: 0.85,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.out",
-        });
-      }
+    // Section 3 image
+    gsap.from(imageRef.current, {
+      scrollTrigger: {
+        trigger: imageSectionRef.current,
+        start: "top 85%",
+        end: "bottom 60%",
+      },
+      scale: 0.85,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
     });
   }, []);
 
@@ -51,10 +61,10 @@ const LeadGenStrategiesComp = () => {
 
         {/* Section 1: Revolutionizing Real Estate */}
         <div
-          ref={(el) => { sectionsRef.current[0] = el! }}
+          ref={section1Ref}
           className="lg:w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col justify-center items-center text-center gap-6"
         >
-          <div className="animate-text">
+          <div ref={text1Ref}>
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Revolutionizing <span className="text-[rgb(255,70,85)]">Real Estate</span>
             </h2>
@@ -66,10 +76,10 @@ const LeadGenStrategiesComp = () => {
 
         {/* Section 2: Business Growth */}
         <div
-          ref={(el) => { sectionsRef.current[1] = el! }}
+          ref={section2Ref}
           className="lg:w-[90%] h-full mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col gap-6"
         >
-          <div className="flex flex-col items-start gap-4 animate-text">
+          <div ref={text2Ref} className="flex flex-col items-start gap-4">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 text-center">
               BUSINESS <span className="text-[rgb(255,70,85)]">GROWTH</span>
             </h2>
@@ -99,12 +109,12 @@ const LeadGenStrategiesComp = () => {
           </div>
         </div>
 
-        {/* Section 3: img */}
+        {/* Section 3: Image Only */}
         <div
-          ref={(el) => { sectionsRef.current[2] = el! }}
+          ref={imageSectionRef}
           className="lg:w-[90%] h-full lg:h-[300px] mx-auto flex justify-center items-center"
         >
-          <div className="lg:w-[50%] h-full animate-img">
+          <div ref={imageRef} className="lg:w-[50%] h-full">
             <img
               width={500}
               height={500}

@@ -1,61 +1,160 @@
-
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GetLeadsComp from "./GetLeadsComp";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HowItWorksComp = () => {
-  const sectionsRef = useRef<HTMLDivElement[]>([]);
-  const textRefs = useRef<HTMLDivElement[]>([]);
-  const imgRefs = useRef<HTMLDivElement[]>([]);
+  const section1Text = useRef(null);
+  const section1Img = useRef(null);
+  const section2Text = useRef(null);
+  const section2Img = useRef(null);
+  const section3Text = useRef(null);
+  const section3Img = useRef(null);
+  const section4Text = useRef(null);
+  const section4Img = useRef(null);
+  const section5Text = useRef(null);
+  const section5Img = useRef(null);
 
   useGSAP(() => {
-    sectionsRef.current.forEach((section, index) => {
-      const textEl = textRefs.current[index];
-      const imgEl = imgRefs.current[index];
+    gsap.from(section1Text.current, {
+      scrollTrigger: {
+        trigger: section1Text.current,
+        start: "30% 50%",
+        end: "bottom 50%",
+        // markers: true,
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
 
-      if (textEl) {
-        gsap.from(textEl, {
-          scrollTrigger: {
-            trigger: section,
-            start: "30% 50%",
-            end: "bottom 50%",
-            markers: true,
-            
-          },
-          x: -200,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.out",
-        });
-      }
+    gsap.from(section1Img.current, {
+      scrollTrigger: {
+        trigger: section1Img.current,
+        start: "20% 60%",
+        end: "bottom 60%",
+        // markers: true,
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
 
-      if (imgEl) {
-        gsap.from(imgEl, {
-          scrollTrigger: {
-            trigger: section,
-            start: "20% 60%",
-            end: "bottom 60%",
-            markers: true,
-            
-          },
-          scale: 0.8,
-          opacity: 0,
-          duration: 1.5,
-          ease: "power4.out",
-        });
-      }
+    gsap.from(section2Text.current, {
+      scrollTrigger: {
+        trigger: section2Text.current,
+        start: "30% 50%",
+        end: "bottom 50%",
+        // markers: true,
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section2Img.current, {
+      scrollTrigger: {
+        trigger: section2Img.current,
+        start: "20% 60%",
+        end: "bottom 60%",
+        // markers: true,
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section3Text.current, {
+      scrollTrigger: {
+        trigger: section3Text.current,
+        start: "30% 50%",
+        end: "bottom 50%",
+        // markers: true,
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section3Img.current, {
+      scrollTrigger: {
+        trigger: section3Img.current,
+        start: "20% 60%",
+        end: "bottom 60%",
+        // markers: true,
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section4Text.current, {
+      scrollTrigger: {
+        trigger: section4Text.current,
+        start: "30% 50%",
+        end: "bottom 50%",
+        // markers: true,
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section4Img.current, {
+      scrollTrigger: {
+        trigger: section4Img.current,
+        start: "20% 60%",
+        end: "bottom 60%",
+        // markers: true,
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section5Text.current, {
+      scrollTrigger: {
+        trigger: section5Text.current,
+        start: "30% 50%",
+        end: "bottom 50%",
+        // markers: true,
+      },
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+    });
+
+    gsap.from(section5Img.current, {
+      scrollTrigger: {
+        trigger: section5Img.current,
+        start: "20% 60%",
+        end: "bottom 60%",
+        // markers: true,
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
     });
   }, []);
 
   return (
     <div className="w-full flex flex-col mt-25 items-center gap-16 justify-center min-h-screen bg-gray-100 lg:p-6">
       {/* Banner */}
-      <div className="lg:w-[80%]  h-full  flex justify-between items-center text-black bg-white shadow-lg rounded-lg p-8">
+      <div className="lg:w-[80%] h-full flex justify-between items-center text-black bg-white shadow-lg rounded-lg p-8">
         <div className="w-[45%]">
           <h1 className="lg:text-5xl text-xl font-semibold">
             You Seal the <span className="text-[rgb(255,70,85)]">Deal</span>,<br />
@@ -74,19 +173,16 @@ const HowItWorksComp = () => {
       </div>
 
       {/* Section 1 */}
-      <div
-        ref={(el) => {sectionsRef.current[0] = el!}}
-        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
-      >
-        <div ref={(el) => {textRefs.current[0] = el!}} className=" flex flex-col items-start gap-4 lg:w-[50%]">
+      <div className="lg:w-[80%] h-full mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10">
+        <div ref={section1Text} className="flex flex-col items-start gap-4 lg:w-[50%]">
           <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight">
-            Behind the <span className="text-[rgb(255,70,85)]"> PROCESS</span>
+            Behind the <span className="text-[rgb(255,70,85)]">PROCESS</span>
           </h2>
           <p className="lg:text-lg text-sm text-gray-300">A Sneak Peek Behind the Curtain</p>
           <p className="text-sm lg:text-base text-gray-400">
-            At <span className="text-white font-semibold">Realtors Match</span>,{` we don’t just
+            At <span className="text-white font-semibold">Realtors Match</span>, we don’t just
             connect clients with agents — we craft personalized journeys. Here's a glimpse into
-            our innovative matchmaking process:`}
+            our innovative matchmaking process:
           </p>
           <ul className="space-y-4 text-sm lg:text-base text-gray-300 mt-4">
             <li>🔍 <span className="font-semibold text-white">1. Understanding Your Needs:</span><br />From budget to lifestyle.</li>
@@ -96,23 +192,14 @@ const HowItWorksComp = () => {
             <li>🏡 <span className="font-semibold text-white">5. Closing Made Simple:</span><br />We guide you till the end.</li>
           </ul>
         </div>
-        <div ref={(el) => {imgRefs.current[0] = el!}} className="lg:w-[45%] animate-img">
-          <img
-            width={500}
-            height={500}
-            src="/works-home.webp"
-            alt="How It Works"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div ref={section1Img} className="lg:w-[45%] animate-img">
+          <img src="/works-home.webp" alt="How It Works" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </div>
 
       {/* Section 2 */}
-      <div
-        ref={(el) => {sectionsRef.current[1] = el!}}
-        className="lg:w-[80%] h-full  mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
-      >
-        <div ref={(el) => {textRefs.current[1] = el!}} className="lg:w-[50%]">
+      <div className="lg:w-[80%] h-full mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10">
+        <div ref={section2Text} className="lg:w-[50%]">
           <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-gray-900">
             The Engine Behind <span className="text-[rgb(255,70,85)]">Our Success</span>
           </h2>
@@ -125,23 +212,14 @@ const HowItWorksComp = () => {
             </button>
           </Link>
         </div>
-        <div ref={(el) => {imgRefs.current[1] = el!}} className="lg:w-[45%] animate-img">
-          <img
-            width={500}
-            height={500}
-            src="/works-operational.webp"
-            alt="Operational Framework"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div ref={section2Img} className="lg:w-[45%] animate-img">
+          <img src="/works-operational.webp" alt="Operational Framework" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </div>
 
       {/* Section 3 */}
-      <div
-        ref={(el) => {sectionsRef.current[2] = el!}}
-        className="lg:w-[80%] h-full  mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
-      >
-        <div ref={(el) => {textRefs.current[2] = el!}} className="lg:w-[50%]">
+      <div className="lg:w-[80%] h-full mx-auto bg-white text-black shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10">
+        <div ref={section3Text} className="lg:w-[50%]">
           <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-gray-900">
             Connecting You with <span className="text-[rgb(255,70,85)]">Ready Buyers</span>
           </h2>
@@ -154,23 +232,14 @@ const HowItWorksComp = () => {
             </button>
           </Link>
         </div>
-        <div ref={(el) => {imgRefs.current[2] = el!}} className="lg:w-[45%] animate-img">
-          <img
-            width={500}
-            height={500}
-            src="/renting-property.webp"
-            alt="Lead Generation Strategies"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div ref={section3Img} className="lg:w-[45%] animate-img">
+          <img src="/renting-property.webp" alt="Lead Generation Strategies" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </div>
 
       {/* Section 4 */}
-      <div
-        ref={(el) => {sectionsRef.current[3] = el!}}
-        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10"
-      >
-        <div ref={(el) => {textRefs.current[3] = el!}} className="lg:w-[50%]">
+      <div className="lg:w-[80%] h-full mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col-reverse lg:flex-row justify-between items-center gap-10">
+        <div ref={section4Text} className="lg:w-[50%]">
           <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-white">
             Turning Interest into <span className="text-[rgb(255,70,85)]">Loyalty</span>
           </h2>
@@ -183,23 +252,14 @@ const HowItWorksComp = () => {
             </button>
           </Link>
         </div>
-        <div ref={(el) => {imgRefs.current[3] = el!}} className="lg:w-[45%] animate-img">
-          <img
-            width={500}
-            height={500}
-            src="/loyalty.jpg"
-            alt="Lead Nurturing Strategy"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div ref={section4Img} className="lg:w-[45%] animate-img">
+          <img src="/loyalty.jpg" alt="Lead Nurturing Strategy" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </div>
 
       {/* Section 5 */}
-      <div
-        ref={(el) => {sectionsRef.current[4] = el!}}
-        className="lg:w-[80%] h-full  mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10"
-      >
-        <div ref={(el) => {textRefs.current[4] = el!}} className="lg:w-[50%]">
+      <div className="lg:w-[80%] h-full mx-auto bg-black text-white shadow-xl lg:rounded-2xl p-10 flex flex-col lg:flex-row-reverse justify-between items-center gap-10">
+        <div ref={section5Text} className="lg:w-[50%]">
           <h2 className="lg:text-5xl text-2xl font-bold lg:leading-tight text-white">
             Strategic Partnering <span className="text-[rgb(255,70,85)]">Model</span>
           </h2>
@@ -212,14 +272,8 @@ const HowItWorksComp = () => {
             </button>
           </Link>
         </div>
-        <div ref={(el) => {imgRefs.current[4] = el!}} className="lg:w-[45%] animate-img">
-          <img
-            width={500}
-            height={500}
-            src="/model.webp"
-            alt="Partner Playbook"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div ref={section5Img} className="lg:w-[45%] animate-img">
+          <img src="/model.webp" alt="Partner Playbook" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </div>
 

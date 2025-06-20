@@ -4,21 +4,20 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GetLeadsComp from "./GetLeadsComp";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const LeadNurturingComp = () => {
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
-  const imgRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    // Text animation
     gsap.from(textRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 30%",
         end: "bottom 60%",
-        
       },
       x: -200,
       opacity: 0,
@@ -26,6 +25,7 @@ const LeadNurturingComp = () => {
       ease: "power4.out",
     });
 
+    // Image animation
     gsap.from(imgRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
@@ -42,11 +42,11 @@ const LeadNurturingComp = () => {
   return (
     <>
       <div className="w-full bg-white mt-25 text-white py-20 lg:px-6 flex flex-col gap-20">
-        {/* Section 3: Cultivating Client Relationships */}
         <div
           ref={containerRef}
           className="lg:w-[90%] mx-auto bg-white text-black shadow-xl rounded-2xl p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
         >
+          {/* Text Section */}
           <div ref={textRef} className="lg:w-1/2">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
               Cultivating <span className="text-[rgb(255,70,85)]">Client Relationships</span>
@@ -78,6 +78,7 @@ const LeadNurturingComp = () => {
             </p>
           </div>
 
+          {/* Image Section */}
           <div ref={imgRef} className="lg:w-1/2">
             <img
               width={500}

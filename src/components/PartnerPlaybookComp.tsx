@@ -7,26 +7,70 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const PartnerPlaybookComp = () => {
-  const sectionsRef = useRef<HTMLDivElement[]>([]);
+  const section1Ref = useRef<HTMLDivElement>(null);
+  const section2Ref = useRef<HTMLDivElement>(null);
+  const section3Ref = useRef<HTMLDivElement>(null);
+  const section4Ref = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    sectionsRef.current.forEach((el) => {
-      if (el) {
-        gsap.from(el, {
-          scrollTrigger: {
-            trigger: el,
-            start: "top 50%",
-            end: "50% 60%",
-            markers: true,
-            toggleActions: "play none none ",
-          },
-          opacity: 0,
-          y: 60,
-          duration: 1,
-          delay:  0.1,
-          ease: "power3.out",
-        });
-      }
+    gsap.from(section1Ref.current, {
+      scrollTrigger: {
+        trigger: section1Ref.current,
+        start: "top 50%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        // markers: true,
+      },
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      delay: 0.1,
+      ease: "power3.out",
+    });
+
+    gsap.from(section2Ref.current, {
+      scrollTrigger: {
+        trigger: section2Ref.current,
+        start: "top 50%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        // markers: true,
+      },
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      delay: 0.1,
+      ease: "power3.out",
+    });
+
+    gsap.from(section3Ref.current, {
+      scrollTrigger: {
+        trigger: section3Ref.current,
+        start: "top 50%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        // markers: true,
+      },
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      delay: 0.1,
+      ease: "power3.out",
+    });
+
+    gsap.from(section4Ref.current, {
+      scrollTrigger: {
+        trigger: section4Ref.current,
+        start: "top 50%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        // markers: true,
+      },
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      delay: 0.1,
+      ease: "power3.out",
     });
   }, []);
 
@@ -35,8 +79,8 @@ const PartnerPlaybookComp = () => {
       <div className="lg:w-[90%] mx-auto mt-30 bg-white text-black shadow-xl rounded-2xl flex flex-col gap-12">
         {/* 1. Communication That Connects */}
         <div
+          ref={section1Ref}
           className="flex flex-col h-full lg:flex-row justify-between items-center gap-10 p-10"
-          ref={(el) => { sectionsRef.current[0] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
@@ -63,8 +107,8 @@ const PartnerPlaybookComp = () => {
 
         {/* 2. Empowerment Through Support */}
         <div
+          ref={section2Ref}
           className="flex flex-col h-full lg:flex-row-reverse justify-between items-center gap-10 p-10"
-          ref={(el) => { sectionsRef.current[1] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
@@ -91,8 +135,8 @@ const PartnerPlaybookComp = () => {
 
         {/* 3. Consistency Through Every Stage */}
         <div
+          ref={section3Ref}
           className="flex flex-col h-full lg:flex-row justify-between items-center gap-10 p-10"
-          ref={(el) => { sectionsRef.current[2] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
@@ -119,8 +163,8 @@ const PartnerPlaybookComp = () => {
 
         {/* 4. Innovation as a Standard */}
         <div
+          ref={section4Ref}
           className="flex flex-col h-full lg:flex-row-reverse justify-between items-center gap-10 p-10"
-          ref={(el) => { sectionsRef.current[3] = el! }}
         >
           <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-4">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
