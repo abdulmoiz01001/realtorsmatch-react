@@ -55,7 +55,7 @@ const HeroSectionComp = () => {
             transition={{ delay: 0.3, duration: 1 }}
             className="text-4xl md:text-6xl font-bold mb-4"
           >
-            Welcome to RealtorsMatch
+            Welcome to Realtors Match
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}

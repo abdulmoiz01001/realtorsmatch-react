@@ -1,26 +1,16 @@
 
 ;
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
   Send,
 } from 'lucide-react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FooterComp = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="w-[90%] mx-auto px-4 py-10 flex flex-wrap justify-between items-start gap-y-10">
+      <div className="w-[70%] mx-auto px-4 py-10 flex flex-wrap justify-between items-start gap-y-10">
         {/* Contact Us */}
-        <div className="w-full sm:w-[48%] lg:w-[25%] flex flex-col gap-3">
-          <h2 className="lg:text-2xl text-xl uppercase text-[#ff4655] font-semibold mb-2">Contact Us</h2>
-          <p className="lg:text-lg text-sm">Address: 16192 Coastal Highway Lewes, DE</p>
-          {/* <p className="lg:text-lg text-sm">City, State, Zip</p> */}
-          <p className="lg:text-lg text-sm">Phone: 830 468 9292</p>
-          <p className="lg:text-lg text-sm">Email: info@RealtorsMatch.com</p>
-        </div>
+
 
         {/* Legal Links */}
         <div className="w-full sm:w-[48%] lg:w-[25%] flex flex-col gap-3">
@@ -91,7 +81,7 @@ const FooterComp = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="w-[90%] mx-auto px-4 py-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-[70%] mx-auto px-4 py-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 p-2 rounded-full bg-[#ff4655] flex items-center justify-center">
             <Send size={20} />
@@ -109,12 +99,17 @@ const FooterComp = () => {
           </Link>
         </p>
 
-        <div className="flex gap-4">
-          <Link to="#" className="hover:text-[#ff4655] transition"><Facebook size={20} /></Link>
-          <Link to="#" className="hover:text-[#ff4655] transition"><Twitter size={20} /></Link>
-          <Link to="#" className="hover:text-[#ff4655] transition"><Instagram size={20} /></Link>
-          <Link to="#" className="hover:text-[#ff4655] transition"><Linkedin size={20} /></Link>
-        </div>
+        {/* <div className="flex gap-4"> */}
+          <div className="w-full sm:w-[48%] lg:w-[25%] flex flex-col gap-3">
+           {/* <Link to="/contact-us" className="flex flex-col items-start">
+            <h2 className="lg:text-2xl text-xl uppercase px-2 rounded active:scale-110 bg-[#ff4655] font-semibold mb-2">Contact Us</h2>
+           </Link> */}
+            {/* <p className="lg:text-lg text-sm">Address: 16192 Coastal Highway Lewes, DE</p> */}
+            {/* <p className="lg:text-lg text-sm">City, State, Zip</p> */}
+            {/* <p className="lg:text-lg text-sm">Phone: 830 468 9292</p> */}
+            {/* <p className="lg:text-lg text-sm">Email: info@RealtorsMatch.com</p> */}
+          </div>
+        {/* </div> */}
       </div>
     </footer>
   );
