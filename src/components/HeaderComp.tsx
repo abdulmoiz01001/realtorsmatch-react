@@ -30,8 +30,9 @@ const HeaderComp = () => {
     <>
       <div className="w-full lg:w-[95%] z-20 flex justify-between text-[var(--text-color)] px-5 items-center fixed top-0 lg:top-10 inset-x-0 mx-auto h-16 bg-white lg:rounded-4xl shadow-md">
         {/* Logo Section */}
-        <div className="w-[25%] cursor-pointer" onClick={() => router('/')}>
-          <h1 className="lg:text-2xl text-lg font-bold">Realtos Match</h1>
+        <div className="lg:w-[25%] cursor-pointer" onClick={() => router('/')}>
+          {/* <h1 className="lg:text-2xl text-lg font-bold">Realtos Match</h1> */}
+          <img src="/logo.png" alt="Realtors Match Logo" className=" h-25 w-auto" />
         </div>
 
         {/* Nav Links - Desktop */}

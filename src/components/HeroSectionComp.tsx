@@ -63,7 +63,7 @@ const HeroSectionComp = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="text-lg md:text-xl max-w-xl mx-auto"
           >
-            Helping realtors build trust through projects, stories, and success.
+            Helping Realtors build trust through projects, stories, and success.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

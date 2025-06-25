@@ -3,7 +3,7 @@
 const CommunicationPolicyComp = () => {
     return (
         <>
-            <div className='w-full h-full flex flex-col pt-30 justify-center items-center ' >
+            <div className='w-full z-10 h-full flex flex-col pt-30 justify-center items-center ' >
                 <div className='bg-black w-[80%] lg:py-10 py-5 flex flex-col justify-start items-start gap-8' >
                     <h1 className='lg:text-8xl text-3xl text-[rgb(255,70,85)] font-semibold lg:px-10 pl-3 lg:pt-10' >Communication Policy</h1>
                 </div>
