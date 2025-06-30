@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Phone, Menu, X } from 'lucide-react';
 import FancyButton from './common/FancyButton';
+import { User } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', slug: '/' },
@@ -53,7 +54,7 @@ const HeaderComp = () => {
         {/* Contact & CTA */}
         <div className="lg:w-[25%] w-[70%] flex justify-end items-center gap-4">
           <div className="relative">
-            <Phone size={20} onClick={togglePhone} className="cursor-pointer" />
+            <Phone size={20} onClick={togglePhone} className=" active:scale-110 cursor-pointer" />
 
             {showPhone && (
               <div className="absolute top-8 left-1/2 w-[130px] -translate-x-1/2 bg-white border border-gray-300 shadow-md rounded px-3 py-1 text-sm font-medium text-gray-800 transition-all duration-300 ease-in-out animate-fade-in z-50">
@@ -62,7 +63,21 @@ const HeaderComp = () => {
             )}
           </div>
 
-          <span className="ml-2 text-sm font-semibold hidden sm:inline">830 468 9292</span>
+          {/* <span className="ml-2 text-sm font-semibold hidden sm:inline">830 468 9292</span> */}
+          {
+            localStorage.getItem('token') ?
+            <Link to="/user-profile" >
+            <div className="w-10 h-10 cursor-pointer active:scale-110 rounded-full bg-gray-200 flex items-center justify-center">
+              <User color='red' className="w-5 h-5 text-gray-600" />
+            </div>
+            </Link>:
+            <Link to="/signin" className="bg-red-800 text-white px-6 py-2 cursor-pointer active:scale-110 rounded-full flex items-center justify-center">
+              <button className="w-full h-full flex items-center justify-center">
+             Login
+              </button>
+            </Link>
+
+          }
           <div className="hidden lg:block" onClick={() => router('/contact-us')}>
             <FancyButton label="Call Us Now" href="/contact-us" />
           </div>

@@ -1,7 +1,38 @@
 import { LocationEditIcon, MailIcon, PhoneCall } from 'lucide-react'
-
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
 
 const ContactUsComp = () => {
+    const initialValues = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: '',
+    }
+
+    const validationSchema = Yup.object({
+        firstName: Yup.string().required('First Name is required'),
+        lastName: Yup.string().required('Last Name is required'),
+        email: Yup.string().email('Invalid email').required('Email is required'),
+        subject: Yup.string().required('Subject is required'),
+        message: Yup.string().required('Message is required'),
+    })
+
+    const handleSubmit = async (values : { values : any }, { resetForm, setSubmitting } : { resetForm : any , setSubmitting : any }) => {
+        try {
+            await axios.post(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/mail/contact`, values)
+            alert('Your message has been sent successfully!')
+            resetForm()
+        } catch (error) {
+            console.error('Failed to send message:', error)
+            alert('Something went wrong, please try again later.')
+        } finally {
+            setSubmitting(false)
+        }
+    }
+
     return (
         <>
             <div className="w-full min-h-screen text-black pt-40 flex flex-col items-center bg-gray-50">
@@ -20,9 +51,9 @@ const ContactUsComp = () => {
                     {/* img */}
                     <div className="overflow-hidden rounded-xl shadow-md animate-fade-in">
                         <img src="/contact-us.jpg"
-                        width={800}
-                        height={600}
-                        alt="Contact Us" className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-500 ease-in-out" />
+                            width={800}
+                            height={600}
+                            alt="Contact Us" className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-500 ease-in-out" />
                     </div>
                 </div>
 
@@ -63,36 +94,45 @@ const ContactUsComp = () => {
                         </div>
                     ))}
                 </div>
-                   {/* Contact Form */}
+                {/* Contact Form */}
                 <div className="lg:w-[90%] lg:max-w-5xl my-16 bg-white p-10 rounded-xl shadow-xl">
                     <h2 className="text-3xl font-bold text-center text-[#ff4655] mb-8">Send Us a Message</h2>
-                    <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="flex flex-col">
-                            <label className="text-sm font-medium mb-1">First Name</label>
-                            <input type="text" placeholder="John" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
-                        </div>
-                        <div className="flex flex-col">
-                            <label className="text-sm font-medium mb-1">Last Name</label>
-                            <input type="text" placeholder="Doe" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
-                        </div>
-                        <div className="flex flex-col md:col-span-2">
-                            <label className="text-sm font-medium mb-1">Email</label>
-                            <input type="email" placeholder="you@example.com" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
-                        </div>
-                        <div className="flex flex-col md:col-span-2">
-                            <label className="text-sm font-medium mb-1">Subject</label>
-                            <input type="text" placeholder="Subject of your message" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
-                        </div>
-                        <div className="flex flex-col md:col-span-2">
-                            <label className="text-sm font-medium mb-1">Message</label>
-                            <textarea placeholder="Your message..." rows={5} className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]"></textarea>
-                        </div>
-                        <div className="md:col-span-2 text-center">
-                            <button type="submit" className="bg-[#ff4655] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e03e4c] transition-all duration-300">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                    <Formik initialValues={initialValues as any} validationSchema={validationSchema} onSubmit={handleSubmit}>
+                        {({ isSubmitting }) => (
+                            <Form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="flex flex-col">
+                                    <label className="text-sm font-medium mb-1">First Name</label>
+                                    <Field name="firstName" placeholder="John" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
+                                    <ErrorMessage name="firstName" component="div" className="text-red-500 text-xs mt-1" />
+                                </div>
+                                <div className="flex flex-col">
+                                    <label className="text-sm font-medium mb-1">Last Name</label>
+                                    <Field name="lastName" placeholder="Doe" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
+                                    <ErrorMessage name="lastName" component="div" className="text-red-500 text-xs mt-1" />
+                                </div>
+                                <div className="flex flex-col md:col-span-2">
+                                    <label className="text-sm font-medium mb-1">Email</label>
+                                    <Field name="email" type="email" placeholder="you@example.com" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
+                                    <ErrorMessage name="email" component="div" className="text-red-500 text-xs mt-1" />
+                                </div>
+                                <div className="flex flex-col md:col-span-2">
+                                    <label className="text-sm font-medium mb-1">Subject</label>
+                                    <Field name="subject" placeholder="Subject of your message" className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
+                                    <ErrorMessage name="subject" component="div" className="text-red-500 text-xs mt-1" />
+                                </div>
+                                <div className="flex flex-col md:col-span-2">
+                                    <label className="text-sm font-medium mb-1">Message</label>
+                                    <Field as="textarea" name="message" rows={5} placeholder="Your message..." className="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4655]" />
+                                    <ErrorMessage name="message" component="div" className="text-red-500 text-xs mt-1" />
+                                </div>
+                                <div className="md:col-span-2 text-center">
+                                    <button type="submit" disabled={isSubmitting} className="bg-[#ff4655] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e03e4c] transition-all duration-300">
+                                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    </button>
+                                </div>
+                            </Form>
+                        )}
+                    </Formik>
                 </div>
             </div>
         </>
