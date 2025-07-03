@@ -1,9 +1,9 @@
 
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Phone, Menu, X } from 'lucide-react';
 import FancyButton from './common/FancyButton';
-import { User } from 'lucide-react';
+
 
 const navLinks = [
   { label: 'Home', slug: '/' },
@@ -64,7 +64,7 @@ const HeaderComp = () => {
           </div>
 
           {/* <span className="ml-2 text-sm font-semibold hidden sm:inline">830 468 9292</span> */}
-          {
+          {/* {
             localStorage.getItem('token') ?
             <Link to="/user-profile" >
             <div className="w-10 h-10 cursor-pointer active:scale-110 rounded-full bg-gray-200 flex items-center justify-center">
@@ -77,7 +77,7 @@ const HeaderComp = () => {
               </button>
             </Link>
 
-          }
+          } */}
           <div className="hidden lg:block" onClick={() => router('/contact-us')}>
             <FancyButton label="Call Us Now" href="/contact-us" />
           </div>

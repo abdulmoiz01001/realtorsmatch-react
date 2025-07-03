@@ -16,9 +16,10 @@ import SingleBlogPage from './pages/SingleBlogPage';
 import LayoutPage from './pages/LayoutPage';
 import HomePage from './pages/HomePage';
 import ScrollToTop from './hooks/ScrollToTop';
-import SignUpPage from './pages/SignUpPage';
-import SigninPage from './pages/SigninPage';
-import UserProfilePage from './pages/UserProfilePage';
+// import SignUpPage from './pages/SignUpPage';
+// import SigninPage from './pages/SigninPage';
+// import UserProfilePage from './pages/UserProfilePage';
+import CheckOutPage from './pages/CheckOutPage';
 
 function App() {
   return (
@@ -28,9 +29,10 @@ function App() {
         <Route path="/" element={<LayoutPage />} >
           <Route index element={<HomePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
-          <Route path="/signin" element={<SigninPage />} />
-          <Route path="/user-profile" element={<UserProfilePage />} />
+          {/* <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/signin" element={<SigninPage />} /> */}
+          {/* <Route path="/user-profile" element={<UserProfilePage />} /> */}
+          <Route path="/checkout" element={<CheckOutPage />} />
           {/* Add other routes here */}
           <Route path="/communication-policy" element={<CommunicationPolicyPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />

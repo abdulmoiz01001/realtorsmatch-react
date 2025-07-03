@@ -76,7 +76,7 @@ const ContactUsComp = () => {
                         {
                             icon: <LocationEditIcon className="w-12 h-12 text-[#ff4655]" />,
                             label: "Visit us at",
-                            content: "16192 Coastal Highway Lewes, DE",
+                            content: "1201 N Orange St, Suite 321, Wilmington, DE",
                             href: "https://www.google.com/maps/place/123+Main+St,+City,+State,+12345"
                         }
                     ].map((item, index) => (

@@ -1,8 +1,4 @@
 
-;
-import {
-  Send,
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FooterComp = () => {
@@ -83,8 +79,10 @@ const FooterComp = () => {
       {/* Footer Bottom */}
       <div className="w-[70%] mx-auto px-4 py-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 p-2 rounded-full bg-[#ff4655] flex items-center justify-center">
-            <Send size={20} />
+          <div className=" h-20 p-2 rounded bg-[#ff4655] flex items-center justify-center">
+            {/* <Send size={20} /> */}
+            <img src="/logo.png" alt="Realtors Match Logo" className=" h-25 w-auto" />
+      
           </div>
           <span className="text-xl font-semibold">Realtors Match</span>
         </div>
