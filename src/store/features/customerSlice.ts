@@ -1,10 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit'; 
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface CustomerDetails {
   firstName: string;
   lastName: string;
   email: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
 }
 
 interface CustomerState {

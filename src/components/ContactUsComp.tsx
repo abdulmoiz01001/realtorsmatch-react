@@ -20,7 +20,7 @@ const ContactUsComp = () => {
         message: Yup.string().required('Message is required'),
     })
 
-    const handleSubmit = async (values : { values : any }, { resetForm, setSubmitting } : { resetForm : any , setSubmitting : any }) => {
+    const handleSubmit = async (values: { values: any }, { resetForm, setSubmitting }: { resetForm: any, setSubmitting: any }) => {
         try {
             await axios.post(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/mail/contact`, values)
             alert('Your message has been sent successfully!')
@@ -76,23 +76,23 @@ const ContactUsComp = () => {
                         {
                             icon: <LocationEditIcon className="w-12 h-12 text-[#ff4655]" />,
                             label: "Visit us at",
-                            content: "1201 N Orange St, Suite 321, Wilmington, DE",
-                            href: "https://www.google.com/maps/place/123+Main+St,+City,+State,+12345"
+                            href: "https://www.google.com/maps/place/1201+N+Orange+St,+Suite+321,+Wilmington,+DE",
+                            content: "1201 N Orange St, Suite 321, Wilmington, DE"
                         }
                     ].map((item, index) => (
-                        <div
-                            key={index}
-                            className="w-[290px] bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out flex flex-col items-center gap-4"
-                        >
-                            {item.icon}
-                            <p className="text-lg">
-                                {item.label} <br />
-                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[#ff4655] font-medium underline">
-                                    {item.content}
-                                </a>
-                            </p>
-                        </div>
-                    ))}
+                                <div
+                                    key={index}
+                                    className="w-[290px] bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out flex flex-col items-center gap-4"
+                                >
+                                    {item.icon}
+                                    <p className="text-lg">
+                                        {item.label} <br />
+                                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[#ff4655] font-medium underline">
+                                            {item.content}
+                                        </a>
+                                    </p>
+                                </div>
+                            ))}
                 </div>
                 {/* Contact Form */}
                 <div className="lg:w-[90%] lg:max-w-5xl my-16 bg-white p-10 rounded-xl shadow-xl">
