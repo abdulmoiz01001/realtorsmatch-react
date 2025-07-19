@@ -35,7 +35,7 @@ const ReviewSliderComp = () => {
 
     const fetchReviews = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/api/reviews");
+            const response = await axios.get(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/reviews`);
             setReviews(response.data);
         } catch (error) {
             console.error("Error fetching reviews:", error);
@@ -56,7 +56,7 @@ const ReviewSliderComp = () => {
         };
 
         try {
-            await axios.post("http://localhost:3000/api/reviews/create", newReview);
+            await axios.post(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/reviews/create`, newReview);
             setShowAddBoolean(false);
             setFirstName("");
             setLastName("");
