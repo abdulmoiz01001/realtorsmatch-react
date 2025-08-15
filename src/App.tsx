@@ -20,11 +20,14 @@ import ScrollToTop from './hooks/ScrollToTop';
 // import SigninPage from './pages/SigninPage';
 // import UserProfilePage from './pages/UserProfilePage';
 import CheckOutPage from './pages/CheckOutPage';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
+import ChatBotComp from './components/ChatBotComp';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ChatBotComp />
       <Routes>
         <Route path="/" element={<LayoutPage />} >
           <Route index element={<HomePage />} />
@@ -43,6 +46,7 @@ function App() {
           <Route path="/partner-playbook" element={<PartnerPlaybookPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
           <Route path="/refund-policy" element={<RefundPolicyPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/resources/:slug" element={<SingleBlogPage />} />

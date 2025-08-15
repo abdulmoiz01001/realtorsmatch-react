@@ -35,19 +35,19 @@ const HeroSectionComp = () => {
               alt={`Slide ${idx}`}
               width={1920}
               height={1080}
-              className="h-full w-full object-cover transition-all duration-1000"
+              className="h-full w-full  object-cover transition-all duration-1000"
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10 px-4 text-white">
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4 text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="text-center flex flex-col justify-center items-center gap-4"
+          className="text-center bg-black/50 p-4 rounded-2xl backdrop-blur-sm flex flex-col justify-center items-center gap-4"
         >
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

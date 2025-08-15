@@ -9,7 +9,7 @@ const PrivacyPolicyComp = () => {
                 </div>
                 <div className=' w-[80%] py-10 flex text-black text-justify flex-col justify-start items-start gap-8' >
                     <p>
-                       {`
+                        {`
                         This Privacy Policy governs how Realtors Match and its affiliated entities
                         (“we,” “us,” or “our”) handle the collection, use, and sharing of information when
                         you use our websites, tools, promotions, products, or any other services
@@ -120,11 +120,12 @@ const PrivacyPolicyComp = () => {
 
                     <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">3. Disclosing Your Information</h2>
                     <ul className="list-disc pl-6 mb-4">
-                        <li>With your consent or to real estate partners</li>
-                        <li>To subcontractors, service providers, business partners</li>
-                        <li>In compliance with legal or public safety obligations</li>
-                        <li>In business transfers like mergers or acquisitions</li>
+                        <li>No mobile information will be shared with third parties/affiliates for marketing or promotional purposes.</li>
+                        <li>Information may be shared with subcontractors in support services, such as customer service.</li>
+                        <li>All other use cases exclude text messaging originator opt-in data and consent.</li>
+                        <li>This information will not be shared with any third parties outside the purposes stated above.</li>
                     </ul>
+
 
                     <h2 className="lg:text-2xl text-xl font-semibold mt-8 mb-4">4. Online Analytics and Advertising</h2>
                     <p className="mb-4">

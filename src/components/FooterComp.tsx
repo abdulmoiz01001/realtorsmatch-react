@@ -56,6 +56,9 @@ const FooterComp = () => {
               <Link to="/terms-of-use" className="lg:text-lg text-sm hover:text-[#ff4655] transition">Terms Of Use</Link>
             </li>
             <li>
+              <Link to="/terms-and-conditions" className="lg:text-lg text-sm hover:text-[#ff4655] transition">Terms And Conditions</Link>
+            </li>
+            <li>
               <Link to="/communication-policy" className="lg:text-lg text-sm hover:text-[#ff4655] transition">Communication Policy</Link>
             </li>
             <li>
